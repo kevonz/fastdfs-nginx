@@ -2,20 +2,21 @@ version: '3'
 services:
   tracker:
     container_name: tracker
-    image: ygqygq2/fastdfs-nginx
+    image: basemall/fastdfs-nginx
     command: tracker
     network_mode: host
     volumes:   
-      - /var/fdfs/tracker:/var/fdfs    
+      - /data/fdfs/tracker:/var/fdfs    
   storage0:
-    container_name: storage0
-    image: ygqygq2/fastdfs-nginx
+    container_name: storage
+    image: basemall/fastdfs-nginx
     command: storage
     network_mode: host  
     environment:
-      - TRACKER_SERVER=10.1.5.85:22122
+      #- TRACKER_SERVER=10.1.5.85:22122
+      - TRACKER_SERVER=tracker:22122
     volumes: 
-      - /var/fdfs/storage0:/var/fdfs
+      - /data/fdfs/storage:/var/fdfs
   # storage1:
   #   container_name: storage1
   #   image: ygqygq2/fastdfs-nginx

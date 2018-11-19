@@ -1,11 +1,11 @@
 FROM centos:7
 
-LABEL maintainer "29ygq@sina.com"
+LABEL maintainer "kevonz@live.com"
 
 ENV FASTDFS_PATH=/opt/fdfs \
     FASTDFS_BASE_PATH=/var/fdfs \
-    NGINX_VERSION="1.14.0" \
-    TENGINE_VERSION="2.2.2" \
+    NGINX_VERSION="1.14.1" \
+    TENGINE_VERSION="2.2.3" \
     PORT= \
     GROUP_NAME= \
     TRACKER_SERVER=

@@ -66,6 +66,7 @@ RUN touch /usr/local/nginx/html/favicon.ico
 RUN touch /usr/share/nginx/html/index.html
 COPY start.sh /usr/bin/
 
+WORKDIR /etc/fdfs
 #make the start.sh executable 
 RUN chmod 777 /usr/bin/start.sh
 

@@ -60,10 +60,10 @@ RUN mkdir /nginx_conf && mkdir -p /usr/local/nginx/conf/conf.d
 COPY nginx_conf/ /nginx_conf/
 COPY nginx_conf/nginx.conf /usr/local/nginx/conf/
 
-RUN mkdir -p /usr/local/nginx/html/
+RUN mkdir -p /usr/local/nginx/html/ && mkdir /usr/share/nginx/html/
 RUN echo "Are you ok? :)" >> /usr/local/nginx/html/index.html
 RUN touch /usr/local/nginx/html/favicon.ico
-
+RUN touch /usr/share/nginx/html/index.html
 COPY start.sh /usr/bin/
 
 #make the start.sh executable 

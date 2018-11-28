@@ -49,7 +49,6 @@ RUN git clone --depth 1 https://github.com/happyfish100/fastdfs-nginx-module.git
  && make \
  && make install \
  && ln -s /usr/local/nginx/sbin/nginx /usr/bin/ \
-# && rm -rf ${FASTDFS_PATH}/fastdfs-nginx-module \
 
 EXPOSE 22122 23000 8080 8888 80
 VOLUME ["$FASTDFS_BASE_PATH","/etc/fdfs","/usr/local/nginx/conf/conf.d"]   
